@@ -10,4 +10,4 @@ It will delete all position markers and empty lines and merge all that into one 
 
 `squash-sbv captions.sbv extension`
 
-If you don't fancy GNU/Linux command line way try [online captions converter](http://captionsconverter.com/ "Captions Converter").
+If you don't fancy *GNU/Linux command line* try [online captions converter](http://captionsconverter.com/ "Captions Converter") instead.
