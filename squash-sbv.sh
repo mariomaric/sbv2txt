@@ -17,6 +17,6 @@ out=$(echo "$1" | sed "s/sbv/$ext/")
 # 1) Delete lines containing comma and empty lines with sed
 # 2) Replace newlines with space with tr
 # 3) Add one newline to the end of file with sed
-sed -e "/,/d" -e "/^$/d" "$1" | tr '\n' ' ' | sed -e '$a\' > "$out"
+sed -e '/,/d' -e '/^$/d' "$1" | tr '\n' ' ' | sed -e '$a\' > "$out"
 
 exit
