@@ -1,12 +1,12 @@
-## Why this script?
+## Why?
 
 Because I wanted to make a decent documents out of automatic captions of my YouTube videos and I wanted to speed up a little bit that process.
 
-## What this script will do?
+## What?
 
 It will delete all position markers and empty lines (except the last one) and merge all that into one gigantic piece of text.
 
-## How to use it?
+## How?
 
 `squash-sbv captions.sbv [extension]`
 
