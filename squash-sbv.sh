@@ -1,22 +1,22 @@
 #!/bin/bash
-# Requirements: sed, tr
-# Usage: squash-sbv captions.sbv [extension]
+# Info: https://github.com/mariomaric/squash-sbv#readme
 
 # If file extension is not provided use markdown i.e. .md
 if [ -z "$2" ]
-  then
+then
     ext="md"
-  else
+else
     ext="$2"
 fi
 
 # Prepare output file with default / provided extension
-out=$(echo "$1" | sed "s/sbv/$ext/")
+out=$(echo "$1" | sed -e "s/sbv/$ext/")
 
 # Do the sed and tr magic with input and write it to output file
-# 1) Delete lines containing comma and empty lines with sed
-# 2) Replace newlines with space with tr
-# 3) Add one newline to the end of file with sed
-sed -e '/,/d' -e '/^$/d' "$1" | tr '\n' ' ' | sed -e '$a\' > "$out"
+# 1) Delete lines containing time stamps
+# 2) Delete empty lines
+# 2) Replace newlines with space
+# 3) Add one newline to the end of file
+grep -v -e ".*\..*,.*\..*" "$1" | sed '/^$/d' | tr '\n' ' ' | sed -e '$a\' > "$out"
 
-exit
+exit 0
