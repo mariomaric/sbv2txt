@@ -1,10 +1,10 @@
 #!/bin/bash
 # Info: https://github.com/mariomaric/squash-sbv#readme
 
-# If file extension is not provided use markdown i.e. .md
+# If file extension is not provided use markdown i.e. .markdown
 if [ -z "$2" ]
 then
-    ext="md"
+    ext="markdown"
 else
     ext="$2"
 fi
