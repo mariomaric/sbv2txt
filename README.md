@@ -8,7 +8,7 @@ This bash shell wrapper script will delete all position markers and empty lines 
 
 ## How?
 
-Usage: `squash-sbv captions.sbv [extension]`
+Usage: `squash-sbv captions.sbv [EXTENSION]`
 
 ## Misc
 

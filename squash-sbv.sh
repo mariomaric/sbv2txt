@@ -1,7 +1,7 @@
 #!/bin/bash
 # Info: https://github.com/mariomaric/squash-sbv#readme
 
-# If file extension is not provided use markdown i.e. .markdown
+# If file extension is not provided use markdown
 if [ -z "$2" ]
 then
     ext="markdown"
@@ -12,7 +12,7 @@ fi
 # Prepare output file with default / provided extension
 out=$(echo "$1" | sed -e "s/sbv/$ext/")
 
-# Do the sed and tr magic with input and write it to output file
+# Do the grep,grep,  sed and tr magic with input and write it to output file
 # 1) Delete lines containing time stamps
 # 2) Delete empty lines
 # 2) Replace newlines with space
